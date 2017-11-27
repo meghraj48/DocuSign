@@ -24,9 +24,9 @@ namespace Webhook.Helpers
         public static string GetAccountId()
         {
             var appSettings = System.Configuration.ConfigurationManager.AppSettings;
-            string username = appSettings["docusignDeveloperEmail"] ?? "9ad8e254-25dc-463c-8a89-2bba3c25e191";
-            string password = appSettings["docusignPassword"] ?? "iam@Deerwalk";
-            string integratorKey = appSettings["docusignIntegratorKey"] ?? "f6713851-029f-4113-b92a-24e959cc87d8";
+            string username = appSettings["docusignDeveloperEmail"] ?? "";
+            string password = appSettings["docusignPassword"] ?? "";
+            string integratorKey = appSettings["docusignIntegratorKey"] ?? "";
 
             string authHeader = "{\"Username\":\"" + username + "\", \"Password\":\"" + password + "\", \"IntegratorKey\":\"" + integratorKey + "\"}";
 
